@@ -53,3 +53,11 @@ When File Manager is launched from a course image field, it opens as the normal 
 3. Complete the focused PHP 7.4/PHP 8 compatibility inventory for framework-owned code.
 4. Commit and test each compatibility family separately.
 5. Begin module compatibility work only after the core is functionally dependable.
+
+## Toolbar compatibility checkpoint
+
+Confirmed fixes:
+
+- CSS menu renderer no longer carries submenu CSS classes between items.
+- CSS menu now calls `uri(NULL, ...)` instead of `uri('', ...)`.
+- Course dropdown navigation works correctly again under PHP 7.4.
