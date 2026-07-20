@@ -53,3 +53,20 @@ Verified fixes made there must be applied back to the appropriate repository, su
 ### Temporary installation credentials
 
 The installation used `admin / a` for verification. This is suitable only for the disposable local legacy environment and must not be used outside it.
+
+#Technical debt for admin login
+
+There are three reservations:
+The direct permissions-table implementation is a secure PHP 8.2 compatibility bridge. It should be revisited when LiveUser is replaced, rather than preserved as the eventual authorization architecture.
+
+Calling parent::init() inside each lookup changes the model’s active table.
+That is normal in some old Chisimba code, but it can create subtle side effects if the same object is reused later. Explicit table arguments help, but a dedicated permissions repository would be cleaner.
+It bypasses LiveUser’s higher-level behavior.
+Direct membership works, but LiveUser may also have intended semantics around inherited groups, permission types, application scopes, or nested groups. For Site Admin, direct membership is probably the correct security rule, but we should verify that against the original authorization design.
+
+So my assessment is:
+
+Safe enough for the restored development system: yes.
+Safer than relying on accesslevel or a username-based override: definitely.
+Suitable as the final modernization architecture: no.
+Likely to create unauthorized administrator access: not from the evidence we have; the query requires an actual database membership link.
