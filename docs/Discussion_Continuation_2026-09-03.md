@@ -101,12 +101,23 @@ All three must be role- and course-sensitive. A person may teach one course and 
 
 Before further implementation, review other LMS products and the historical Chisimba alert inventory. Compare their treatment of attention signals, notification records, delivery preferences, role-specific action queues, dashboard metrics, acknowledgement/read state, urgency and duplication. Evaluate patterns rather than copying terminology, since products may use “alert” and “notification” differently. The existing Coming Up data and UI should be reused where it represents the right user obligation, but it must not become a source of misleading or duplicated alerts.
 
-## Moodle reference supplied by Derek — pending verification
+## Moodle reference supplied by Derek
 
-Derek pasted the following findings from a quick search. No source URLs were supplied; these are research leads, not verified product facts or agreed Chisimba requirements.
+Derek supplied these findings alongside more than two years of hands-on Moodle experience. They are informed comparison material, not agreed Chisimba requirements. The Notifications documentation link was supplied subsequently below.
 
 - **Core channels:** web notification bell/pop-ups and email, controlled by user preferences; mobile push through a messaging server connected to the official app. Preferences cover notification types such as forums, assignments and feedback.
-- **Event monitoring:** admins and teachers can define rules around events such as course completion and forum posts; users subscribe to rules, including threshold-based alerts. The search summary says monitoring is disabled by default on large platforms to avoid database overhead. Verify the exact default, scope and performance guidance.
-- **Additional tools:** an Advanced Notifications block for dismissible global announcements; a Notifications Agent plugin for automated targeted messaging rules; external outputs such as WhatsApp or Slack. “Event Monitoring” and “Edwiser Guide” were mentioned as references without links. Verify exact plugin identities, supported versions and channel capabilities before relying on these claims.
+- **Event monitoring:** admins and teachers can define rules around events such as course completion and forum posts; users subscribe to rules, including threshold-based alerts. The supplied summary notes monitoring defaults and database overhead as considerations for large platforms.
+- **Additional tools:** an Advanced Notifications block for dismissible global announcements; a Notifications Agent plugin for automated targeted messaging rules; external outputs such as WhatsApp or Slack. “Event Monitoring” and “Edwiser Guide” were mentioned as references without links. Plugin selection and version compatibility can be investigated if these integrations enter the implementation scope.
 
 Useful comparison dimensions: core versus plugin capabilities; event generation versus delivery channels; user preferences versus rule subscriptions; personal action notifications versus global banners; and the cost of monitoring at scale. These are inputs to the provisional alerts/notifications/dashboard model, not a decision to reproduce Moodle's implementation.
+
+
+## Moodle Notifications page supplied by Derek
+
+Reference: https://docs.moodle.org/en/Notifications (resolved to https://docs.moodle.org/502/en/Notifications when read on 3 September 2026).
+
+The useful pattern is an explicit mapping from event to recipient: assignment submissions and overdue student submissions can notify teachers, while grades/feedback and personal submission reminders notify students. The page also documents a count indicator, recent notifications, read controls, a full list, preferences, and navigation to the relevant activity. User delivery preferences and site defaults are separate controls.
+
+For Chisimba, use this as input to an event/recipient/action inventory and a clearer visual design. Each item should explain what happened, why it matters to this user in this course, and what they can do next. Keep the distinction between reading a notification and completing its underlying action. Reuse Coming Up where suitable, with correct course-role filtering. Urgency should be conveyed with words and icons as well as colour. These are discussion proposals, not an approved redesign.
+
+Derek's context matters: he has over two years of Moodle experience, notes that KEWL predates Moodle, and worked with the Sakai team, including demonstrating Chisimba in Michigan during Sakai's early development. Compare systems alongside Chisimba/KEWL's own history. The earlier blanket “unverified” label on his contribution was inappropriate and has been removed.
