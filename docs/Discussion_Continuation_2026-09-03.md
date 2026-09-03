@@ -48,3 +48,9 @@ Derek requested Chrome instead of the in-app browser. The Chrome plugin connecte
 - The Notifications centre failed to load. Read-only database inspection confirmed no `notifications` module registration and no `tbl_notification*` tables. Its installation and end-to-end delivery remain outstanding. Source inspection also found its feed URL appends `?limit=25` to an existing query URL, and its read-action client does not refresh the one-time CSRF token; these require follow-up.
 
 Chrome resolves the browser-access blocker. The broader locked-topic, new-topic, concurrent stale-form and notification journeys listed above are not yet fully browser-verified. No source-code changes were made during this Chrome check.
+
+## Marking-page visual polish
+
+At Derek's request, the marking page now uses defined white learner cards, compact progress counters, clearer header hierarchy, distinct review-state badges and expand/collapse indicators. Score inputs use the full form width with compact sizing; longer AI reasoning and linked evidence are expandable. Feedback and the total/save action have clearer separation. Styles use the existing skin tokens and are scoped to this marking page. The Discussion stylesheet URL now changes with its file modification time so browsers receive updates.
+
+Verified in Chrome at desktop size and 390-pixel width, including learner expansion and AI evidence expansion. No marking-page elements exceeded the narrow viewport. The evidence freshness and assessment contracts still pass; no marks were changed as part of the visual polish.
