@@ -11,3 +11,5 @@ Do not request filesystem permissions on the Docker socket. That previously caus
 Source task: `01a0665c-8a73-7403-bc8b-09b5b97b8a64`. Successful continuation: `01a067b5-f82e-7793-8130-30415f49a1d8`.
 
 Follow-up evidence: local Docker commands work with ordinary command escalation; no socket filesystem permission was requested. This does not grant writes to every descendant directory: creating a diagnostic in `dev-environment/runtime/php85-ch` failed, and that directory is owned by `nobody:nogroup`. The diagnostic was instead created in the writable Discussion scripts directory, executed through its existing container mount, and removed. The in-app browser still rejects the local HTTPS certificate with `ERR_CERT_AUTHORITY_INVALID`; workspace recovery did not resolve certificate trust.
+
+Browser follow-up: at Derek's request, the Chrome plugin successfully controlled an existing Chrome tab at the local HTTPS site. Lecturer saves, learner replies and fresh AI re-marking were then verified in Chrome without bypassing a certificate warning. Prefer this tested Chrome route for continuing local browser work when the in-app browser rejects this private certificate.

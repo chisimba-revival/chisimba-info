@@ -34,3 +34,17 @@ Once browser access works, enter course `testing106`. Discussion `gen17Srv16Nme1
 5. Check layout and reviewed-toggle behaviour, including saving while reviewed learners are shown. Broad shared banner/alert work and searchable outbound email attempt/SMTP-acceptance/delivery history remain subsequent work.
 
 The two earlier intentional probe posts remain: admin `gen17Srv16Nme16_39908_1788435670` and learner `gen17Srv16Nme16_25351_1788435805`.
+
+## Chrome verification follow-up
+
+Derek requested Chrome instead of the in-app browser. The Chrome plugin connected successfully to the existing local-site tab, already signed in as `essay_smoke_lecturer`; no certificate bypass was performed.
+
+- Saved the learner's baseline 46/50 review through the browser. The queue changed from six awaiting / zero reviewed to five awaiting / one reviewed, and the saved state survived reload.
+- Signed in as `essay_smoke_student`, submitted a nested reply through the rich-text composer, and verified its author, parent link and new-own-reply delete control. No deletion was performed. New intentional test post: `gen17Srv16Nme16_28801_1788447930`, subject `Re: Evidence freshness browser check`.
+- Learner marking access was denied. The denial incorrectly describes the learner as not a course member; this wording remains a known issue.
+- Returned to the lecturer and verified seven contributions, requeued review, preserved prior 46/50, and enabled fresh AI submission.
+- Submitted a fresh AI request through the browser and processed one worker job: selected 1, completed 1, failed 0. The new draft cited the seventh contribution and proposed 84/100 (42/50), recognising the regression-test posts as non-academic evidence.
+- Saved that dummy learner's fresh draft through the browser and verified `Marked: 42 / 50` after reload. The learner has one reviewed snapshot covering seven contributions. This is test data, not a real learner grade.
+- The Notifications centre failed to load. Read-only database inspection confirmed no `notifications` module registration and no `tbl_notification*` tables. Its installation and end-to-end delivery remain outstanding. Source inspection also found its feed URL appends `?limit=25` to an existing query URL, and its read-action client does not refresh the one-time CSRF token; these require follow-up.
+
+Chrome resolves the browser-access blocker. The broader locked-topic, new-topic, concurrent stale-form and notification journeys listed above are not yet fully browser-verified. No source-code changes were made during this Chrome check.
