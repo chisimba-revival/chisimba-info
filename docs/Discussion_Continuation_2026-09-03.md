@@ -54,3 +54,13 @@ Chrome resolves the browser-access blocker. The broader locked-topic, new-topic,
 At Derek's request, the marking page now uses defined white learner cards, compact progress counters, clearer header hierarchy, distinct review-state badges and expand/collapse indicators. Score inputs use the full form width with compact sizing; longer AI reasoning and linked evidence are expandable. Feedback and the total/save action have clearer separation. Styles use the existing skin tokens and are scoped to this marking page. The Discussion stylesheet URL now changes with its file modification time so browsers receive updates.
 
 Verified in Chrome at desktop size and 390-pixel width, including learner expansion and AI evidence expansion. No marking-page elements exceeded the narrow viewport. The evidence freshness and assessment contracts still pass; no marks were changed as part of the visual polish.
+
+## Notification toolbar follow-up
+
+Installed Notifications locally through the native module catalogue installer, creating its event/recipient tables and registration. Added an authenticated Updates bell with unread badge, five-item preview, Refresh/Close controls, and link to the full centre. Counts refresh every minute on visible pages and when focus returns. Opening the preview does not mark notifications read.
+
+Fixed feed query construction and renewal of single-use CSRF tokens after read actions. Preview and centre share one client, synchronize after marking, restrict target links to same-origin HTTP(S), and show useful empty/error states. Assets are versioned. Framework integration remains optional when Notifications is not installed.
+
+Chrome verified the empty centre, two dummy-lecturer test notifications, sequential read actions (2 → 1 → 0 in both surfaces), persistence after reload, unread-only empty state, and a 390px preview with no horizontal overflow. The learner account showed an empty feed and could not see the lecturer fixtures. Local fixture IDs are `9b157651ff5c189c9fed1b324ec7f0e7` and `c63da214893288f99d88fd9f590a8343`; both are read, and their titles clearly identify browser checks. The temporary installer/fixture script was removed. No external messages or email were sent.
+
+Notification contract and 12 service behaviour checks pass, as do toolbar audience/home contracts and the new optional-module/authentication behaviour test. Changed PHP files and client JavaScript pass syntax checks. The existing postlogin_leave_context_contract_test fails against the unchanged sidemenu and unchanged test in HEAD; this pre-existing expectation is unrelated to notifications. Broader producer-to-recipient Discussion subscription checks remain outstanding. No KengaLearn deployment.
