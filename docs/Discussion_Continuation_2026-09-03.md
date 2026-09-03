@@ -74,3 +74,17 @@ This exposed a real deep-link defect: the original notification link went straig
 Submitted a second real browser reply after the fix. Its notification opened the normal course-entry prompt from a fresh lecturer sign-in; “Enter … and continue” reached the correct topic with the new reply present. Marked both test notifications read (badge returned to zero) and restored the lecturer's original “Do not notify me” preference. The two intentional test posts remain: `gen17Srv16Nme16_39485_1788450459` (original-link regression) and `gen17Srv16Nme16_59189_1788450717` (corrected course-entry verification). These additional contributions will requeue the dummy learner's prior assessment on the next marking-page review; no marks were changed.
 
 The course-target regression test, Discussion Notifications contract, and 12 Notifications service behaviour checks pass, including unique recipients, author exclusion and idempotent repeat publication. PHP syntax and diff whitespace checks pass. This verifies topic-follow → reply → recipient notification → course entry → conversation → mark read. New-topic/all-discussion subscriptions and external email are separate journeys. No production deployment or email sending took place. Previously stored notification targets are not rewritten; the earlier test notification retains its original link.
+
+## Product direction from Derek — discuss next session
+
+The Updates functionality is a useful start, but its user journey needs further design. Derek wants to discuss this tomorrow after revisiting the historical Chisimba alert types. Do not treat the current menu placement as the final design: alerts cannot simply be a menu item.
+
+Capture these use cases and presentation ideas for that discussion:
+
+- Time-sensitive assignment reminders: due this week, in three days, tomorrow, and today, with appropriate urgency colours in the icon. Exact colours and reminder rules are still undecided.
+- Event alerts: a question has been answered in a question discussion; an assignment has been marked; further historical alert types to be identified.
+- Delivery may include in-app alerts, email, and WhatsApp, for example. These are future channel ideas, not authorization to send messages or enable integrations now.
+- Stats/status indicators, including the existing status pill, also need consideration alongside alerts and notifications.
+- The main user block is another important place to surface alerts and notifications.
+
+Resume with the user journey and the historical alert inventory before deciding placement, interaction, urgency treatment, channel preferences, or implementation scope. No further interface redesign was requested for tonight.
