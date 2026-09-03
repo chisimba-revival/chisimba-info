@@ -88,3 +88,15 @@ Capture these use cases and presentation ideas for that discussion:
 - The main user block is another important place to surface alerts and notifications.
 
 Resume with the user journey and the historical alert inventory before deciding placement, interaction, urgency treatment, channel preferences, or implementation scope. No further interface redesign was requested for tonight.
+
+## Product model: alerts, notifications and dashboard
+
+Derek clarified that these are three distinct product concepts. Preserve this distinction during research and design:
+
+1. **Alert** — an attention signal that makes the user aware of a notification. Its placement, icon, colour and urgency should help the user notice something; it is not itself a toolbar menu destination.
+2. **Notification** — the durable explanation of an event or a time-based action that may be required. Examples include a question being answered, an assignment being marked, or a deadline approaching. A notification may later be delivered through in-app UI, email or WhatsApp according to policy and user preferences.
+3. **Dashboard** — current results and information of interest across the user's courses and the system. It frequently reflects activity outcomes rather than asking for an action: latest mark, average mark, rank, percentage complete by course, and similar indicators.
+
+All three must be role- and course-sensitive. A person may teach one course and study in another. For example, the current Coming Up block incorrectly presents an overdue learner essay to a lecturer as if the lecturer owed the submission. For a learner, a deadline can mean “submit this work”; for a lecturer, the same assessment can mean “submission window closes soon”, “learners have not submitted”, or later “work awaits marking”. The item wording, action, urgency and visibility must derive from the user's role in that course, not merely from the existence of the activity.
+
+Before further implementation, review other LMS products and the historical Chisimba alert inventory. Compare their treatment of attention signals, notification records, delivery preferences, role-specific action queues, dashboard metrics, acknowledgement/read state, urgency and duplication. Evaluate patterns rather than copying terminology, since products may use “alert” and “notification” differently. The existing Coming Up data and UI should be reused where it represents the right user obligation, but it must not become a source of misleading or duplicated alerts.
