@@ -214,6 +214,15 @@ Capability installation and capability announcement are separate administrator a
 
 Announcements are one publishing tool with independent content type, audience and delivery choices. Initial types should include **What’s new**, **General announcement**, and **Service notice**, while allowing further registered types later. Audience choices include everyone, administrators, `[-authors-]`, `[-readonlys-]`, and selected `[-contexts-]`. Visibility includes publication time, optional expiry, and whether the item is eligible for a Latest update block. Delivery uses Updates by default, with optional email or WhatsApp when those channels are available. The content model includes title, summary, full message, guide link and optional download link.
 
+Publishing permission is an independent server-side rule. Site-scoped **What’s new**, **General announcement**, and **Service notice** items may be published only by a site administrator. A `[-context-]`-scoped **General announcement** may be published by a `[-author-]` of that `[-context-]` or by a site administrator. Recipient selection never grants publishing permission.
+
+| Scope | Type | Permitted publisher |
+|---|---|---|
+| Site | What’s new | Site administrator |
+| Site | General announcement | Site administrator |
+| Site | Service notice | Site administrator |
+| Selected `[-context-]` or `[-contexts-]` | General announcement | `[-author-]` for every selected `[-context-]`, or site administrator |
+
 The publication is the durable source record. It supplies the complete announcement archive, while blocks can filter by type: for example, a compact Latest update block can show only **What’s new** items. Publishing may also create personal in-app notifications through the Notifications service so recipients see the announcement under Updates with unread/read state. Communications can later deliver the same approved publication through configured email or WhatsApp channels; the unrecovered legacy internal-mail module is not a prerequisite.
 
 The historical Announcements module has useful site/class scope, archive and latest-block concepts, but it does not currently run: its controller eagerly loads the missing Feed module, and its optional email path depends on the legacy Mail module. Its editor, permissions, listing and delivery path also predate the current UI and notification architecture. Rehabilitation should retain the durable announcement concept while removing those dependencies and integrating Notifications. System Management may generate maintenance-specific service notices through the shared publication boundary later, while continuing to own maintenance planning and site availability.
