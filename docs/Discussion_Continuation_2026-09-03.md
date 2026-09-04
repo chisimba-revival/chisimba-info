@@ -167,3 +167,11 @@ Personal My Teaching appears under Teaching and in the account block only for us
 Chrome verified Site Administrator management navigation and editing access; the administrator's four author relationships appeared in the management preview. Essay Smoke Lecturer, a mixed-role account, retained both My Learning and My Teaching; My Teaching showed only `testing106`, and Manage course reached its control panel. Essay Smoke Student had no teaching navigation and received the correct no-access response from a direct URL. The module was installed locally through the native module catalogue.
 
 Audience behaviour and structural contracts pass, including unique course-author relationships, learner exclusion, separate block storage and course-entry management intent. Toolbar audience and canonical Home contracts plus changed-file PHP syntax and whitespace checks pass. No teaching workload/Coming Up block has been invented yet; its responsibilities should be agreed before implementation.
+
+### Author terminology abstraction
+
+Derek identified a critical hosted-customer requirement: the first customer may use **Instructor** rather than Lecturer. Chisimba's abstraction model already provides `[-author-]` and `[-authors-]` system-text tokens, while `Lecturers` is the stable internal permission-group identifier. Renaming that group now would break permissions and compatibility; visible labels must resolve through the terminology service instead.
+
+Corrected the immediate dashboard path. The chisimba-reborn role badge now resolves the singular configured role through `word_lecturer`/`[-author-]`. Course membership and ownership actions use `[-authors-]`. My Teaching avoids hard-coded role nouns in its visible copy and describes the teaching team. Context and My Teaching registrations were updated locally through the native installer.
+
+A regression contract verifies the role badge and course-management labels retain system-text tokens. Existing membership banner and My Teaching audience checks pass. This is a targeted fix for the dashboard/customer demonstration path, not a claim that every historical module is clean: the audit found additional older modules with literal Lecturer/Lecturers text. A broader terminology audit remains necessary, but changing the underlying role model is still parked.
