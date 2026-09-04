@@ -175,3 +175,13 @@ Derek identified a critical hosted-customer requirement: the first customer may 
 Corrected the immediate dashboard path. The chisimba-reborn role badge now resolves the singular configured role through `word_lecturer`/`[-author-]`. Course membership and ownership actions use `[-authors-]`. My Teaching avoids hard-coded role nouns in its visible copy and describes the teaching team. Context and My Teaching registrations were updated locally through the native installer.
 
 A regression contract verifies the role badge and course-management labels retain system-text tokens. Existing membership banner and My Teaching audience checks pass. This is a targeted fix for the dashboard/customer demonstration path, not a claim that every historical module is clean: the audit found additional older modules with literal Lecturer/Lecturers text. A broader terminology audit remains necessary, but changing the underlying role model is still parked.
+
+## Dashboard management placement and My Administration
+
+Dashboard configuration belongs with the dashboard journey. **Manage My Learning page** is under Learning, **Manage My Teaching page** is under Teaching, and My Administration plus its management action are under Administration. The management entries are visible only to site administrators and have been removed from the Site Administration workbench. Ordinary dashboard views no longer show editing controls merely because the viewer is an administrator.
+
+My Learning remains student-scoped for an administrator who is genuinely enrolled as a student. Administration of that shared page is a separate route and does not change the meaning of the personal view.
+
+My Teaching course cards now show a compact featured course image in the upper-right corner when one exists. Cards without an image retain a clean text layout.
+
+The first My Administration page is an operational site-health overview rather than another settings catalogue. It shows registered users, courses and users online now, followed by a reserved Needs attention area for administrative requests and service warnings once those services expose reliable signals. It has its own independently configurable block layout and separate view/manage routes. The module and navigation were registered and verified in Chrome on the local site.
