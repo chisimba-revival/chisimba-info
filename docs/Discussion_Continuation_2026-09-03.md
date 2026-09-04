@@ -188,6 +188,8 @@ The first My Administration page is an operational site-health overview rather t
 
 ## My Teaching course insights
 
-My Teaching now includes an initial course-by-course author overview. It reports the real number of students, average progress from Context Content learning journeys where that data exists, and the number of submitted assessment items awaiting marking. Registered assessment providers that declare manual marking supply the queue; each option carries stable provider and activity identifiers so a later iteration can connect the appropriate action without changing the dashboard structure.
+My Teaching now includes initial course-by-course author indicators within the existing course cards, avoiding a second repeated list of the same courses. Each card reports the real number of students, average progress from Context Content learning journeys where that data exists, and the number of submitted assessment items awaiting marking. Registered assessment providers that declare manual marking supply the queue; each option carries stable provider and activity identifiers so a later iteration can connect the appropriate action without changing the dashboard structure.
 
 The assessment selector currently shows the assessment name and outstanding count, or an explicit Nothing awaiting marking state. Its Open action control is deliberately disabled and visually muted until provider-specific author destinations are agreed. Missing progress is labelled Not available rather than shown as zero. Visible author and learner role names resolve through `[-author-]` and `[-readonlys-]` terminology. Course featured images retain their natural aspect ratio within the compact My Teaching card thumbnail.
+
+The My Teaching and My Administration dashboard components now own their single visible surface. The canvas regions are transparent placement containers, removing the redundant outer frame and padding that previously produced a panel within a panel.
