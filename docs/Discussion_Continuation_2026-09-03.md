@@ -133,3 +133,9 @@ Administrator configuration is a separate `manage` route. Top navigation places 
 Chrome verification used the local Site Administrator and Essay Smoke Student accounts. Site Administrator had no personal My Learning entry, had management links in both relevant navigation surfaces, and opened the management page with editing capability and zero student obligations. Essay Smoke Student retained My Learning, one student course, progress, and the two learner due items (including the overdue essay). The previously hidden no-access template error was fixed and its message now describes student enrolment accurately. The local module registration was updated through the native installer.
 
 My Learning, student due-item, course visibility, navigation audience and canonical Home contracts pass; PHP/JavaScript syntax and diff whitespace checks pass. The existing configurable extra blocks remain shared at page level. My Teaching and My Administration are the next dashboard implementations; their data and wording must use lecturer and administrator responsibilities respectively.
+
+### My Learning schedule outcome wording
+
+A completed learner submission now has one current state in Coming Up. An unmarked submission says **Awaiting marking**; a released result says **Marked (90%)** using its actual percentage. It does not simultaneously say Submitted, Overdue or show a second percentage badge. Submission satisfies the learner's deadline obligation even when the due date has passed. Pending marking uses the standard primary treatment, while a released result uses the completed treatment.
+
+Added a behaviour regression test that renders both states and rejects conflicting labels. My Learning contracts and PHP syntax pass, and the local module registration was updated through the native installer.
