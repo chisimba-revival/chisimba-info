@@ -218,6 +218,23 @@ or implementation-specific work.
 
 No temporary report should silently redefine a constitutional principle.
 
+### 7.5 Language and terminology are framework concerns
+
+Do not hard-code user-visible English strings in PHP templates, controllers, or
+classes. Register and resolve them through the Chisimba language system, using
+British English for the source text.
+
+Do not hard-code role or context terminology where system-text tokens exist.
+Use `[-author-]`, `[-authors-]`, `[-readonly-]`, `[-readonlys-]`,
+`[-context-]`, `[-contexts-]`, `[-organisation-]`, and
+`[-organisations-]` as appropriate, and render token-bearing strings through
+the system-text-aware language path.
+
+Do not introduce the generic terms *learner* or *learners* into new
+user-visible Chisimba strings when the system-text mechanism should supply the
+role. Repair older terminology defects as bounded work; do not broaden an
+urgent fix solely to clean unrelated historical strings.
+
 ---
 
 ## 8. Operational discipline
