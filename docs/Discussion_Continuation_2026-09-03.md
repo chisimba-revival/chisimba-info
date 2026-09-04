@@ -185,3 +185,9 @@ My Learning remains student-scoped for an administrator who is genuinely enrolle
 My Teaching course cards now show a compact featured course image in the upper-right corner when one exists. Cards without an image retain a clean text layout.
 
 The first My Administration page is an operational site-health overview rather than another settings catalogue. It shows registered users, courses and users online now, followed by a reserved Needs attention area for administrative requests and service warnings once those services expose reliable signals. It has its own independently configurable block layout and separate view/manage routes. The module and navigation were registered and verified in Chrome on the local site.
+
+## My Teaching course insights
+
+My Teaching now includes an initial course-by-course author overview. It reports the real number of students, average progress from Context Content learning journeys where that data exists, and the number of submitted assessment items awaiting marking. Registered assessment providers that declare manual marking supply the queue; each option carries stable provider and activity identifiers so a later iteration can connect the appropriate action without changing the dashboard structure.
+
+The assessment selector currently shows the assessment name and outstanding count, or an explicit Nothing awaiting marking state. Its Open action control is deliberately disabled and visually muted until provider-specific author destinations are agreed. Missing progress is labelled Not available rather than shown as zero. Visible author and learner role names resolve through `[-author-]` and `[-readonlys-]` terminology. Course featured images retain their natural aspect ratio within the compact My Teaching card thumbnail.
