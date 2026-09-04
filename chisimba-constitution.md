@@ -224,6 +224,10 @@ Do not hard-code user-visible English strings in PHP templates, controllers, or
 classes. Register and resolve them through the Chisimba language system, using
 British English for the source text.
 
+After system-text substitution, capitalise the first word when the configured
+term begins a phrase, sentence, heading, label, or menu item. Keep substituted
+terms lower-case when they occur naturally within a sentence.
+
 Do not hard-code role or context terminology where system-text tokens exist.
 Use `[-author-]`, `[-authors-]`, `[-readonly-]`, `[-readonlys-]`,
 `[-context-]`, `[-contexts-]`, `[-organisation-]`, and
