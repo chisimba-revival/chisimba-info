@@ -139,3 +139,19 @@ My Learning, student due-item, course visibility, navigation audience and canoni
 A completed learner submission now has one current state in Coming Up. An unmarked submission says **Awaiting marking**; a released result says **Marked (90%)** using its actual percentage. It does not simultaneously say Submitted, Overdue or show a second percentage badge. Submission satisfies the learner's deadline obligation even when the due date has passed. Pending marking uses the standard primary treatment, while a released result uses the completed treatment.
 
 Added a behaviour regression test that renders both states and rejects conflicting labels. My Learning contracts and PHP syntax pass, and the local module registration was updated through the native installer.
+
+## Future innovation: block audience and placement safety
+
+Park this for later implementation. Blocks need machine-readable audience metadata so an administrator cannot accidentally place a privileged or irrelevant block on a learner-facing page. A block may support more than one audience—for example learner and general.
+
+Provisional audiences, using names to be aligned with Chisimba's existing role vocabulary:
+
+- learner/read-only user
+- author or lecturer
+- site administrator
+- root/superuser, if Chisimba still distinguishes this meaningfully
+- general/all authenticated audiences
+
+Treat these as placement and rendering constraints, not cosmetic categories. The administrator block picker should list only blocks compatible with the page audience, explain why an incompatible block is unavailable, and retain a server-side check so a stale or crafted request cannot bypass the restriction. Rendering should fail closed if a block is already configured in an invalid location. Multi-audience declarations should be explicit; `general` must not silently grant administrative capability.
+
+The model must distinguish a page's intended audience from the current editor's privileges. A site administrator editing My Learning is configuring a learner page, so their own elevated access must not make administrator-only blocks eligible. Existing Chisimba block context tags and permission conventions should be inventoried before choosing final names, storage or migration behaviour. This is recorded as a future innovation and is not part of the current My Learning implementation.
