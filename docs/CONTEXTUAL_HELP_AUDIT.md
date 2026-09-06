@@ -24,6 +24,7 @@ The Essay marking proof establishes the initial pattern:
 | Essay writing and document submission | Current `[-context-]` `[-readonly-]` permission | Implemented for both the in-browser writer and document-upload page; browser-tested with authorised and unauthorised accounts. |
 | Membership operations | Current `membership.view` permission | Implemented on the membership workspace with guidance for manual access, lifecycle changes, roles and audit history; browser-tested with authorised and unauthorised accounts. |
 | Payment operations and reconciliation | Current `payment.view` permission | Implemented on Payment operations with guidance for status, verified events, fulfilment checks, duplicate events and safe support; browser-tested with authorised and unauthorised accounts. |
+| Announcement publishing | Site administrator or `[-author-]` of at least one `[-context-]` | Implemented on the publishing form with type, audience, scope, Updates delivery and sidebar guidance; browser-tested as administrator, `[-author-]` and unauthorised `[-readonly-]`. The form now presents the single valid General type to `[-authors-]`. |
 
 ## Awaiting integration into the current main branches
 
@@ -52,9 +53,8 @@ These topics have current behaviour, sufficient source material and a clear audi
 
 | Priority | Page or task | Audience | Source material | Proposed contextual answer |
 | --- | --- | --- | --- | --- |
-| 1 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
-| 2 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
-| 3 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+| 1 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
+| 2 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
 
 ## Best completed after one observed user journey
 
