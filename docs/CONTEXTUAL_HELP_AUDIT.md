@@ -21,6 +21,7 @@ The Essay marking proof establishes the initial pattern:
 | --- | --- | --- |
 | AI-assisted Essay marking | Current `[-context-]` marking permission | Shipped as the original contextual Help proof. |
 | AI-assisted Worksheet marking (`worksheet`) | Current `[-context-]` lecturer permission | Implemented and browser-tested with authorised and unauthorised accounts. |
+| Essay writing and document submission | Current `[-context-]` `[-readonly-]` permission | Implemented for both the in-browser writer and document-upload page; browser-tested with authorised and unauthorised accounts. |
 
 ## Audiences
 
@@ -40,13 +41,12 @@ These topics have current behaviour, sufficient source material and a clear audi
 
 | Priority | Page or task | Audience | Source material | Proposed contextual answer |
 | --- | --- | --- | --- | --- |
-| 1 | Essay writing or document submission | `readonly` | Essay guide and current submission journey | Difference between draft and submission, online writing versus upload, and what happens after submission. |
-| 2 | Permanent deletion preview | `admin`, `root` | `Permanent_Deletion_Administrator_Guide.md` | When deletion is appropriate, required backup, protected evidence and why archive is normally safer. |
-| 3 | Shared AI worker status and restart | `admin`, `root` | `Shared_AI_Service_Workers_Administrator_Guide.md` | Meaning of idle, stalled and failed states; safe restart; where credentials belong. |
-| 4 | Membership and payment operations | `admin`, `root` | `Chisimba_Membership_and_Payment_Operations_Guide.docx` | Provider mode, keys, webhook health, reconciliation and safe test procedure. |
-| 5 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
-| 6 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
-| 7 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+| 1 | Permanent deletion preview | `admin`, `root` | `Permanent_Deletion_Administrator_Guide.md` | When deletion is appropriate, required backup, protected evidence and why archive is normally safer. |
+| 2 | Shared AI worker status and restart | `admin`, `root` | `Shared_AI_Service_Workers_Administrator_Guide.md` | Meaning of idle, stalled and failed states; safe restart; where credentials belong. |
+| 3 | Membership and payment operations | `admin`, `root` | `Chisimba_Membership_and_Payment_Operations_Guide.docx` | Provider mode, keys, webhook health, reconciliation and safe test procedure. |
+| 4 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
+| 5 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
+| 6 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
 
 ## Best completed after one observed user journey
 
