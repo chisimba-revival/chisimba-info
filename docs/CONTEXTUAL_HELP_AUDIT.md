@@ -25,6 +25,7 @@ The Essay marking proof establishes the initial pattern:
 | Membership operations | Current `membership.view` permission | Implemented on the membership workspace with guidance for manual access, lifecycle changes, roles and audit history; browser-tested with authorised and unauthorised accounts. |
 | Payment operations and reconciliation | Current `payment.view` permission | Implemented on Payment operations with guidance for status, verified events, fulfilment checks, duplicate events and safe support; browser-tested with authorised and unauthorised accounts. |
 | Announcement publishing | Site administrator or `[-author-]` of at least one `[-context-]` | Implemented on the publishing form with type, audience, scope, Updates delivery and sidebar guidance; browser-tested as administrator, `[-author-]` and unauthorised `[-readonly-]`. The form now presents the single valid General type to `[-authors-]`. |
+| Creating and editing Rubrics | Site administrator or `[-author-]` | Implemented on the Rubric library, creation form and matrix editor. The guide directs `[-authors-]` to supplied defaults first, explains criteria, levels, descriptors and scope, and does not assume specialist rubric-building skill. Browser-tested as administrator, authorised `[-author-]` and unauthorised `[-readonly-]`. |
 
 ## Awaiting integration into the current main branches
 
@@ -53,8 +54,7 @@ These topics have current behaviour, sufficient source material and a clear audi
 
 | Priority | Page or task | Audience | Source material | Proposed contextual answer |
 | --- | --- | --- | --- | --- |
-| 1 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
-| 2 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+| 1 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
 
 ## Best completed after one observed user journey
 
