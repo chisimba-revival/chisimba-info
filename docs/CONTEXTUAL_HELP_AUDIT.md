@@ -26,6 +26,7 @@ The Essay marking proof establishes the initial pattern:
 | Payment operations and reconciliation | Current `payment.view` permission | Implemented on Payment operations with guidance for status, verified events, fulfilment checks, duplicate events and safe support; browser-tested with authorised and unauthorised accounts. |
 | Announcement publishing | Site administrator or `[-author-]` of at least one `[-context-]` | Implemented on the publishing form with type, audience, scope, Updates delivery and sidebar guidance; browser-tested as administrator, `[-author-]` and unauthorised `[-readonly-]`. The form now presents the single valid General type to `[-authors-]`. |
 | Creating and editing Rubrics | Site administrator or `[-author-]` | Implemented on the Rubric library, creation form and matrix editor. The guide directs `[-authors-]` to supplied defaults first, explains criteria, levels, descriptors and scope, and does not assume specialist rubric-building skill. Browser-tested as administrator, authorised `[-author-]` and unauthorised `[-readonly-]`. |
+| Assessment Plan and Assessment Sheet | Site administrator or current `[-context-]` `[-author-]` | Implemented on both planning screens. The guide distinguishes activity creation, Gradebook inclusion, weighting and provider-owned marking, and explains the effect of later plan changes. Browser-tested as an authorised `[-author-]` and unauthorised `[-readonly-]`. |
 
 ## Awaiting integration into the current main branches
 
@@ -50,11 +51,7 @@ Audience names are an indexing aid. Visibility must still use the canonical perm
 
 ## Ready for implementation without further product decisions
 
-These topics have current behaviour, sufficient source material and a clear audience boundary.
-
-| Priority | Page or task | Audience | Source material | Proposed contextual answer |
-| --- | --- | --- | --- | --- |
-| 1 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+No further topics are in this queue. The remaining candidates need an observed journey or a product decision before their wording can be trusted.
 
 ## Best completed after one observed user journey
 
