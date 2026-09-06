@@ -22,6 +22,8 @@ The Essay marking proof establishes the initial pattern:
 | AI-assisted Essay marking | Current `[-context-]` marking permission | Shipped as the original contextual Help proof. |
 | AI-assisted Worksheet marking (`worksheet`) | Current `[-context-]` lecturer permission | Implemented and browser-tested with authorised and unauthorised accounts. |
 | Essay writing and document submission | Current `[-context-]` `[-readonly-]` permission | Implemented for both the in-browser writer and document-upload page; browser-tested with authorised and unauthorised accounts. |
+| Membership operations | Current `membership.view` permission | Implemented on the membership workspace with guidance for manual access, lifecycle changes, roles and audit history; browser-tested with authorised and unauthorised accounts. |
+| Payment operations and reconciliation | Current `payment.view` permission | Implemented on Payment operations with guidance for status, verified events, fulfilment checks, duplicate events and safe support; browser-tested with authorised and unauthorised accounts. |
 
 ## Awaiting integration into the current main branches
 
@@ -50,10 +52,9 @@ These topics have current behaviour, sufficient source material and a clear audi
 
 | Priority | Page or task | Audience | Source material | Proposed contextual answer |
 | --- | --- | --- | --- | --- |
-| 1 | Membership and payment operations | `admin`, `root` | `Chisimba_Membership_and_Payment_Operations_Guide.docx` | Provider mode, keys, webhook health, reconciliation and safe test procedure. |
-| 2 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
-| 3 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
-| 4 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+| 1 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
+| 2 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
+| 3 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
 
 ## Best completed after one observed user journey
 
