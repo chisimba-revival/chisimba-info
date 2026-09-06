@@ -23,6 +23,15 @@ The Essay marking proof establishes the initial pattern:
 | AI-assisted Worksheet marking (`worksheet`) | Current `[-context-]` lecturer permission | Implemented and browser-tested with authorised and unauthorised accounts. |
 | Essay writing and document submission | Current `[-context-]` `[-readonly-]` permission | Implemented for both the in-browser writer and document-upload page; browser-tested with authorised and unauthorised accounts. |
 
+## Awaiting integration into the current main branches
+
+These topics have approved source material, but their current pages and services are not present on the framework and modules main branches. Contextual Help should be attached after the underlying work is integrated, rather than documenting an unreachable or obsolete interface.
+
+| Page or task | Existing branch work | Required next step |
+| --- | --- | --- |
+| Permanent deletion preview | `feature/guarded-permanent-delete` and the KengaLearn system-management deployment branch | Integrate and regression-test the guarded deletion service and its preview pages. |
+| Shared AI worker status and restart | System-management deployment/feature work | Integrate and browser-test the worker dashboard and its real restart permission. |
+
 ## Audiences
 
 Topics may name one or more audiences:
@@ -41,12 +50,10 @@ These topics have current behaviour, sufficient source material and a clear audi
 
 | Priority | Page or task | Audience | Source material | Proposed contextual answer |
 | --- | --- | --- | --- | --- |
-| 1 | Permanent deletion preview | `admin`, `root` | `Permanent_Deletion_Administrator_Guide.md` | When deletion is appropriate, required backup, protected evidence and why archive is normally safer. |
-| 2 | Shared AI worker status and restart | `admin`, `root` | `Shared_AI_Service_Workers_Administrator_Guide.md` | Meaning of idle, stalled and failed states; safe restart; where credentials belong. |
-| 3 | Membership and payment operations | `admin`, `root` | `Chisimba_Membership_and_Payment_Operations_Guide.docx` | Provider mode, keys, webhook health, reconciliation and safe test procedure. |
-| 4 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
-| 5 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
-| 6 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
+| 1 | Membership and payment operations | `admin`, `root` | `Chisimba_Membership_and_Payment_Operations_Guide.docx` | Provider mode, keys, webhook health, reconciliation and safe test procedure. |
+| 2 | Announcement publishing | `author`, `admin` according to announcement type | Current Announcements workflow | Difference between site, service, general and `[-context-]` announcements; audience and delivery consequences. |
+| 3 | Creating and editing Rubrics | `author`, `admin` | Current rubric workflow plus Essay and Worksheet guides | How criteria and performance descriptions guide marking, and what a rubric does not calculate. |
+| 4 | Assessment Plan and Assessment Sheet | `author`, `admin` | Current Gradebook behaviour | Difference between registering an activity, assigning its weight and recording marks. |
 
 ## Best completed after one observed user journey
 
