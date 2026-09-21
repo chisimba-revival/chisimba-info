@@ -1,5 +1,11 @@
 # Shared AI service workers: administrator guide
 
+For all background jobs, including Communications and registration cleanup, start
+with the [complete worker installation checklist](../../dev-environment/docs/workers.md).
+The combined AI helper below handles three queues only. Discussion marking has a
+separate worker; its setup is included in that checklist. Do not assume this helper
+runs email delivery or registration retention.
+
 ## Purpose
 
 Some Chisimba AI features put durable work into a queue so a browser request does not wait for the AI provider. The workers currently covered by this guide are:
@@ -107,7 +113,7 @@ After each Chisimba deployment:
 
 1. Confirm the PHP container is running.
 2. Run the script's `check` command.
-3. Run it once manually and inspect both JSON summaries.
+3. Run it once manually and inspect all three JSON summaries.
 4. Confirm scheduled output continues to arrive in the log.
 5. Submit a small non-production worksheet suggestion, Essay suggestion or quiz-generation job when the release changes AI integration code.
 
@@ -123,7 +129,7 @@ The script exits with `PHP container is not running`. Start or repair the applic
 
 ### Worker was not found
 
-Run `check` after the deployment. The helper recognises the supported `ch/packages`, `packages` and `ch/modules` layouts. If neither worker exists, deploy or upgrade the relevant modules; do not copy an individual module into a separate runtime directory in the bind-mounted PHP 8.5 environment.
+Run `check` after the deployment. The helper recognises the supported `ch/packages`, `packages` and `ch/modules` layouts. If any required worker is missing, deploy or upgrade the relevant modules; do not copy an individual module into a separate runtime directory in the bind-mounted PHP 8.5 environment.
 
 ### Queued work remains waiting
 
