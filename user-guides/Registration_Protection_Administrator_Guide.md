@@ -94,3 +94,12 @@ For a new Chisimba installation, use the
 These explain preview-first activation, cron/systemd alternatives, logs, batching,
 verification, stopping and recovery. Registration cleanup is a separate worker
 from email and AI processing.
+
+## Closing new account registration
+
+The installation's **Allow self registration** setting (`KEWL_ALLOW_SELFREGISTER`)
+controls new public login accounts. Set it to `FALSE` to close registration; set it
+to `TRUE` to reopen it. The registration page and direct submissions both enforce
+this setting. Existing users can still sign in or reset passwords, and existing
+pending requests can still confirm their email. Webinar bookings and newsletter
+subscriptions use separate settings.
