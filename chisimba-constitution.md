@@ -1,6 +1,6 @@
 # Chisimba Constitution
 
-**Last updated:** 2026-07-21
+**Last updated:** 2026-10-11
 
 ## Status
 
@@ -80,6 +80,25 @@ responsibilities of another merely for convenience.
 
 Compatibility code may be used only when it enables a controlled migration.
 It must have a defined removal path and must not become the new architecture.
+
+---
+
+### 2.7 Database persistence belongs behind dbTable
+
+All core and application module persistence must use `dbTable`, directly or
+through a shared Chisimba service backed by it. Modules must not use MDB2, PDO,
+mysqli or raw database connections directly. Driver details belong inside the
+shared framework database implementation. Transactions and locking use shared
+checked APIs; schema changes use shared schema/catalogue services through the
+normal guarded installation and upgrade paths.
+
+If a capability is missing, extend and test the shared abstraction rather than
+bypassing it. Existing direct callers are migration debt, not precedents.
+
+Recorded 2026-10-11 following the MDB2-to-PDO caller audit: the general abstraction
+principle in section 2.1 did not make this persistence boundary explicit enough.
+This rule applies to module repositories, services, jobs and installation hooks;
+it is reflected in both repositories' contributor guidance.
 
 ---
 
@@ -205,6 +224,12 @@ A change is not complete merely because it appears to work once. Syntax checks,
 positive and negative regression tests, browser checks, and focused audits
 should accompany significant framework work.
 
+New and materially updated user-facing workflows must include contextual Help
+as part of completion. Use the existing Help system, skin primitives, language
+system and systext terminology. Explain the user's steps, permissions, save and
+publish behaviour, and recovery from common problems; verify the Help entry
+point and full guide alongside the workflow.
+
 ### 7.4 Documentation has hierarchy
 
 The Constitution records enduring principles.
@@ -248,6 +273,12 @@ urgent fix solely to clean unrelated historical strings.
 Source repositories are authoritative. The moderniser and runtime assembler
 should create the executable runtime. Ad hoc runtime changes are for diagnosis
 or bounded proof only and must be reflected back into source and automation.
+
+Production sites share one versioned codebase. Differences between sites belong
+in configuration, selected branding and content, not site-specific module or
+framework implementations. Before deployment, reconcile deployed code drift
+back into the shared source and verify the release against a common manifest.
+Do not overwrite a newer deployed fix or perpetuate it only in a site release.
 
 ### 8.2 Diagnostics are captured consistently
 
